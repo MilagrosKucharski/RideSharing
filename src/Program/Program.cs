@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Library;
 
 namespace PII_Herencia
 {
@@ -7,34 +8,28 @@ namespace PII_Herencia
     {
         static void Main(string[] args)
         {
-            /*
-            En éste método deberas mostrar un ejemplo de funcionamiento de tu programa an pseudocódigo. A continuación te 
-            planteamos un ejemplo de como hacerlo. Esto no significa que te limites a hacer solamente esto, debes pensar 
-            en grande!
-
-            Usuario pasajero1 = nuevo Pasajero()
-            Usuario pasajero2 = nuevo Pasajero()
-            Usuario pasajero3 = nuevo Pasajero()
-            Usuario conductor1 = nuevo Conductor()
-            Usuario conductorPool1 = nuevo ConductorPool(maxPasajeros = 3)
-            UcuRideShare rideShare = nuevo UcuRideShare()
             
-            rideShare.Add(conductor1)
-            Se publica en Twitter un nuevo conductor!
 
-            rideShare.Add(conductorPool1)
-            Se publica en Twitter un nuevo conductor!
+
+            Usuario pasajero1 = new Pasajero("Pedro", "Sanchez", 55369874);
+            Usuario pasajero2 = new Pasajero("Juan", "Perez", 45879534);
+            Usuario pasajero3 = new Pasajero("Julia", "Rodriguez", 55889874);
+            Usuario conductor1 = new Conductor("Pedro", "Sanchez", 55369874, "Auto", "Hola un gusto");
+            Usuario conductorPool1 = new ConductorPool("Pedro", "Sanchez", 55369874, "Auto", "Hola un gusto", 3);
             
-            rideShare.Add(pasajero1)
-            Se publica en Twitter nuevo registro de pasajero!
             
-            rideShare.Add(pasajero2)
-            Se publica en Twitter nuevo registro de pasajero!
+            UcuRideShare.Instance.Usuarios.Add(conductor1);
 
-            rideShare.Add(pasajero3)
-            Se publica en Twitter nuevo registro de pasajero!
+            UcuRideShare.Instance.Usuarios.Add(conductorPool1);
+           
+            UcuRideShare.Instance.Usuarios.Add(pasajero1);
+            
+            UcuRideShare.Instance.Usuarios.Add(pasajero2);
 
-            */
+            UcuRideShare.Instance.Usuarios.Add(pasajero3);
+            
+
+            
         }
     }
 }
