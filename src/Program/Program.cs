@@ -1,40 +1,25 @@
-﻿using System;
+﻿using Library;
+using System;
 using System.Collections;
 
 namespace PII_Herencia
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
-            /*
-            En éste método deberas mostrar un ejemplo de funcionamiento de tu programa an pseudocódigo. A continuación te 
-            planteamos un ejemplo de como hacerlo. Esto no significa que te limites a hacer solamente esto, debes pensar 
-            en grande!
 
-            Usuario pasajero1 = nuevo Pasajero()
-            Usuario pasajero2 = nuevo Pasajero()
-            Usuario pasajero3 = nuevo Pasajero()
-            Usuario conductor1 = nuevo Conductor()
-            Usuario conductorPool1 = nuevo ConductorPool(maxPasajeros = 3)
-            UcuRideShare rideShare = nuevo UcuRideShare()
+            User pasajero1 = new Passenger("a","b","12345");
+            User pasajero2 = new Passenger("c","d","09468");
+            User pasajero3 = new Passenger("e","f","36961");
+            User conductor1 = new Driver("g","h","63812","autoo","x");
+            User conductorPool1 = new poolDriver("i","j","63812","autoooo","x",maxPassengers : 3);
             
-            rideShare.Add(conductor1)
-            Se publica en Twitter un nuevo conductor!
 
-            rideShare.Add(conductorPool1)
-            Se publica en Twitter un nuevo conductor!
-            
-            rideShare.Add(pasajero1)
-            Se publica en Twitter nuevo registro de pasajero!
-            
-            rideShare.Add(pasajero2)
-            Se publica en Twitter nuevo registro de pasajero!
-
-            rideShare.Add(pasajero3)
-            Se publica en Twitter nuevo registro de pasajero!
-
-            */
+            UcuRideShare.Instance.users.Add(conductor1);
+            UcuRideShare.Instance.users.Add(conductorPool1);
+            UcuRideShare.Instance.users.Add(pasajero1);
+            UcuRideShare.Instance.users.Add(pasajero2);
         }
     }
 }
